@@ -1,6 +1,6 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import GroupOutlinedIcon from "@mui/icons-material/GroupOutlined";
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
@@ -9,7 +9,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import MonitorHeartOutlinedIcon from "@mui/icons-material/MonitorHeartOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import AccountBoxOutlinedIcon from "@mui/icons-material/AccountBoxOutlined";
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 
 const Sidebar = () => {
@@ -28,7 +28,7 @@ const Sidebar = () => {
           </li>
           <p className="title">LISTS</p>
           <li>
-            <GroupOutlinedIcon className="icon"/>
+            <PersonRoundedIcon className="icon"/>
             <span>Users</span>
           </li>
           <li>
@@ -67,7 +67,7 @@ const Sidebar = () => {
           </li>
           <p className="title">USER</p>
           <li>
-            <AccountBoxOutlinedIcon className="icon"/>
+            <AccountCircleRoundedIcon className="icon"/>
             <span>Profile</span>
           </li>
           <li>
