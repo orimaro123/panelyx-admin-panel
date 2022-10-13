@@ -1,21 +1,74 @@
 import "./widget.scss";
-import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
+import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import MonetizationOnRoundedIcon from "@mui/icons-material/MonetizationOnRounded";
+import WalletRoundedIcon from "@mui/icons-material/WalletRounded";
 
-const Widget = () => {
+const Widget = ({ type }) => {
+  let data = 0;
+  //temp
+  const amount = 100;
+  const diff = 20;
+
+  switch (type) {
+    case "user":
+      data = {
+        title: "USERS",
+        isMoney: false,
+        link: "See all users",
+        icon: (
+          <PersonRoundedIcon
+            className="icon"
+            style={{ color: "red", backgroundColor: "white" }}
+          />
+        ),
+      };
+      break;
+    case "order":
+      data = {
+        title: "ORDERS",
+        isMoney: false,
+        link: "See all orders",
+        icon: <ShoppingCartRoundedIcon className="icon" />,
+      };
+      break;
+    case "earnings":
+      data = {
+        title: "EARNINGS",
+        isMoney: true,
+        link: "View net earnings",
+        icon: <MonetizationOnRoundedIcon className="icon" />,
+      };
+      break;
+    case "balance":
+      data = {
+        title: "BALANCE",
+        isMoney: true,
+        link: "See details",
+        icon: <WalletRoundedIcon className="icon" />,
+      };
+      break;
+    default:
+      break;
+  }
+
   return (
     <div className="widget">
       <div className="left">
-        <span className="title">USERS</span>
-        <span className="counter">2222</span>
-        <span className="link">See all users</span>
+        <span className="title">{data.title}</span>
+        <span className="counter">
+          {data.isMoney && "$"}
+          {amount}
+        </span>
+        <span className="link">{data.link}</span>
       </div>
       <div className="right">
-      <div className="percentage positive">
-        <ExpandLessOutlinedIcon/>
-        20%
-      </div>
-      <PersonRoundedIcon className="icon"/>
+        <div className="percentage positive">
+          <ExpandLessOutlinedIcon />
+          {diff} %
+        </div>
+        {data.icon}
       </div>
     </div>
   );
