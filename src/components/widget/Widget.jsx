@@ -1,7 +1,7 @@
 import "./widget.scss";
 import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
-import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import MonetizationOnRoundedIcon from "@mui/icons-material/MonetizationOnRounded";
 import WalletRoundedIcon from "@mui/icons-material/WalletRounded";
 
@@ -20,7 +20,7 @@ const Widget = ({ type }) => {
         icon: (
           <PersonRoundedIcon
             className="icon"
-            style={{ color: "red", backgroundColor: "white" }}
+            style={{ color: "crimson", backgroundColor: "rgba(255, 0, 0, 0.2)" }}
           />
         ),
       };
@@ -30,7 +30,9 @@ const Widget = ({ type }) => {
         title: "ORDERS",
         isMoney: false,
         link: "See all orders",
-        icon: <ShoppingCartRoundedIcon className="icon" />,
+        icon: <ShoppingCartRoundedIcon className="icon" style={{ backgroundColor: "rgba(218, 165, 32, 0.2)",
+        color: "goldenrod",}}/>,
+
       };
       break;
     case "earnings":
@@ -38,7 +40,7 @@ const Widget = ({ type }) => {
         title: "EARNINGS",
         isMoney: true,
         link: "View net earnings",
-        icon: <MonetizationOnRoundedIcon className="icon" />,
+        icon: <MonetizationOnRoundedIcon className="icon" style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}/>,
       };
       break;
     case "balance":
@@ -46,7 +48,10 @@ const Widget = ({ type }) => {
         title: "BALANCE",
         isMoney: true,
         link: "See details",
-        icon: <WalletRoundedIcon className="icon" />,
+        icon: <WalletRoundedIcon className="icon" style={{
+            backgroundColor: "rgba(128, 0, 128, 0.2)",
+            color: "purple",
+          }} />,
       };
       break;
     default:
