@@ -30,9 +30,12 @@ const Widget = ({ type }) => {
         title: "ORDERS",
         isMoney: false,
         link: "See all orders",
-        icon: <ShoppingCartRoundedIcon className="icon" style={{ backgroundColor: "rgba(218, 165, 32, 0.2)",
-        color: "goldenrod",}}/>,
-
+        icon: (
+          <ShoppingCartRoundedIcon
+            className="icon"
+            style={{ backgroundColor: "rgba(218, 165, 32, 0.2)", color: "goldenrod" }}
+          />
+        ),
       };
       break;
     case "earnings":
@@ -40,7 +43,12 @@ const Widget = ({ type }) => {
         title: "EARNINGS",
         isMoney: true,
         link: "View net earnings",
-        icon: <MonetizationOnRoundedIcon className="icon" style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}/>,
+        icon: (
+          <MonetizationOnRoundedIcon
+            className="icon"
+            style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
+          />
+        ),
       };
       break;
     case "balance":
@@ -48,10 +56,15 @@ const Widget = ({ type }) => {
         title: "BALANCE",
         isMoney: true,
         link: "See details",
-        icon: <WalletRoundedIcon className="icon" style={{
-            backgroundColor: "rgba(128, 0, 128, 0.2)",
-            color: "purple",
-          }} />,
+        icon: (
+          <WalletRoundedIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(128, 0, 128, 0.2)",
+              color: "purple",
+            }}
+          />
+        ),
       };
       break;
     default:
