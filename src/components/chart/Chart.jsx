@@ -24,7 +24,7 @@ const Chart = () => {
   return (
     <div className="chart">
       <div className="title">Last 6 Months</div>
-      <ResponsiveContainer width={600} aspect={2/1}>
+      <ResponsiveContainer width={700} aspect={2/1}>
         <AreaChart
           width={730}
           height={250}
@@ -39,7 +39,6 @@ const Chart = () => {
     
           </defs>
           <XAxis dataKey="name" stroke="gray" />
-          <YAxis />
           <CartesianGrid strokeDasharray="3 3" className="chartGrid"/>
           <Tooltip />
           <Area
